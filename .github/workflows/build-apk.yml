@@ -28,14 +28,11 @@ jobs:
         channel: 'stable'
         cache: true
       
-    - name: Create env.json with Groq API key
-      run: echo '{"GROQ_API_KEY":"${{ secrets.GROQ_API_KEY }}"}' > env.json
-      
     - name: Get dependencies
       run: flutter pub get
       
     - name: Build APK
-      run: flutter build apk --release
+      run: flutter build apk --release --dart-define=GROQ_API_KEY=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
       
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
