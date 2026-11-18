@@ -1,0 +1,57 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    // Admins are users whose document has role == "admin".
+    // Set the role by hand in the Firebase console. The app cannot grant it.
+    function isAdmin() {
+      return signedIn()
+        && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.get('role', 'user') == 'admin';
+    }
+
+    // Profile and private scan history: owner only. Users cannot change their role.
+    match /users/{uid} {
+      allow read: if signedIn() && request.auth.uid == uid;
+      allow create: if signedIn() && request.auth.uid == uid
+        && request.resource.data.get('role', 'user') == 'user';
+      allow update: if signedIn() && request.auth.uid == uid
+        && request.resource.data.get('role', 'user') == resource.data.get('role', 'user');
+      allow delete: if false;
+
+      match /scans/{scanId} {
+        allow read, write: if signedIn() && request.auth.uid == uid;
+      }
+    }
+
+    // Community reports: signed-in users read; authors manage their own;
+    // anyone signed in may confirm (only the confirm fields may change);
+    // admins can remove any report.
+    match /reports/{id} {
+      allow read: if signedIn();
+      allow create: if signedIn()
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.description is string
+        && request.resource.data.description.size() <= 500;
+      allow update: if signedIn()
+        && request.resource.data.diff(resource.data).affectedKeys()
+             .hasOnly(['confirms', 'confirmedBy']);
+      allow delete: if signedIn() && (resource.data.uid == request.auth.uid || isAdmin());
+    }
+
+    // Official alerts: everyone signed in reads, only admins write.
+    match /alerts/{id} {
+      allow read: if signedIn();
+      allow write: if isAdmin();
+    }
+
+    // Learning resources: everyone signed in reads, only admins write.
+    match /resources/{id} {
+      allow read: if signedIn();
+      allow write: if isAdmin();
+    }
+  }
+}

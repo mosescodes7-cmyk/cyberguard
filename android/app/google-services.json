@@ -1,0 +1,163 @@
+{
+  "project_info": {
+    "project_number": "744346933107",
+    "firebase_url": "https://final-yearprojects-default-rtdb.firebaseio.com",
+    "project_id": "final-yearprojects",
+    "storage_bucket": "final-yearprojects.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744346933107:android:d1defc27fc8e7783721706",
+        "android_client_info": {
+          "package_name": "com.coinquest.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcjOHVQLSRlg_Zl5mel0Z2SEi0IYoYo78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744346933107:android:b8c50a60d94376d5721706",
+        "android_client_info": {
+          "package_name": "com.example.bus_fare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcjOHVQLSRlg_Zl5mel0Z2SEi0IYoYo78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744346933107:android:4912e9384a89c7f6721706",
+        "android_client_info": {
+          "package_name": "com.example.cyberguard"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcjOHVQLSRlg_Zl5mel0Z2SEi0IYoYo78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744346933107:android:f93e900a36705bb9721706",
+        "android_client_info": {
+          "package_name": "com.example.mafutapay"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcjOHVQLSRlg_Zl5mel0Z2SEi0IYoYo78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744346933107:android:42d593ea8e45fcc4721706",
+        "android_client_info": {
+          "package_name": "com.example.nira_bot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcjOHVQLSRlg_Zl5mel0Z2SEi0IYoYo78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744346933107:android:9e4c394d7e3732a0721706",
+        "android_client_info": {
+          "package_name": "com.example.nutrinest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcjOHVQLSRlg_Zl5mel0Z2SEi0IYoYo78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744346933107:android:d28d84bcb52729cf721706",
+        "android_client_info": {
+          "package_name": "com.example.studybox"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcjOHVQLSRlg_Zl5mel0Z2SEi0IYoYo78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744346933107:android:1e45b1b0f3306548721706",
+        "android_client_info": {
+          "package_name": "com.example.xrayapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcjOHVQLSRlg_Zl5mel0Z2SEi0IYoYo78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
